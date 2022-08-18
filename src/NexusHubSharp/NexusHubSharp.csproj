@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Features>strict</Features>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Authors>Kyle Hickman</Authors>
+        <Copyright>Copyright Kyle Hickman</Copyright>
+        <Description>A C# wrapper for the NexusHub WoW Classic API</Description>
+        <RepositoryUrl>https://github.com/kjhickman/nexushub-sharp</RepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Text.Json" Version="6.0.5" />
+    </ItemGroup>
+
+</Project>

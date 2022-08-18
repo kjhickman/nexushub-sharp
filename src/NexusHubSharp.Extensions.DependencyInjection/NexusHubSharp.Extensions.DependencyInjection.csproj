@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Authors>Kyle Hickman</Authors>
+        <Copyright>Copyright Kyle Hickman</Copyright>
+        <Description>NexusHubSharp extensions for ASP.NET Core</Description>
+        <RepositoryUrl>https://github.com/kjhickman/nexushub-sharp</RepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NexusHubSharp\NexusHubSharp.csproj" />
+    </ItemGroup>
+
+</Project>
