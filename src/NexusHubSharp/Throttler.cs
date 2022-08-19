@@ -27,16 +27,16 @@ internal class Throttler : IThrottler
         return await GetAsync(url);
     }
 
-    private static async Task ReleaseAsync(SemaphoreSlim semaphore, int delay)
-    {
-        await Task.Delay(delay * 1000);
-        semaphore.Release();
-    }
-
     private async Task<HttpResponseMessage> GetAsync(Uri url)
     {
         var response = await _http.GetAsync(url);
         ReleaseAsync(_semaphore, _interval);
         return response;
+    }
+    
+    private static async Task ReleaseAsync(SemaphoreSlim semaphore, int delay)
+    {
+        await Task.Delay(delay * 1000);
+        semaphore.Release();
     }
 }

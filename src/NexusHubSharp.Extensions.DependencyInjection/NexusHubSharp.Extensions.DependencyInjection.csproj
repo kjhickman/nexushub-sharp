@@ -4,7 +4,7 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
-        <PackageVersion>0.0.1</PackageVersion>
+        <PackageVersion>0.1.0</PackageVersion>
         <Authors>Kyle Hickman</Authors>
         <Copyright>Copyright Kyle Hickman</Copyright>
         <Description>NexusHubSharp extensions for ASP.NET Core</Description>

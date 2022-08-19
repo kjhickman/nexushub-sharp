@@ -20,7 +20,27 @@ public class NexusClient : INexusClient
     public NexusClient()
     {
         var httpClient = new HttpClient();
-        _requester = new Requester(httpClient);
+        _requester = new ThrottledRequester(httpClient);
+    }
+
+    public NexusClient(NexusClientOptions options)
+    {
+        var httpClient = options.HttpClient ?? new HttpClient();
+        _requester = options.BypassClientRequestThrottling
+            ? new Requester(httpClient)
+            : new ThrottledRequester(httpClient);
+    }
+
+    public NexusClient(HttpClient httpClient)
+    {
+        _requester = new ThrottledRequester(httpClient);
+    }
+
+    public NexusClient(HttpClient httpClient, NexusClientOptions options)
+    {
+        _requester = options.BypassClientRequestThrottling
+            ? new Requester(httpClient)
+            : new ThrottledRequester(httpClient);
     }
 
     /// <inheritdoc />
