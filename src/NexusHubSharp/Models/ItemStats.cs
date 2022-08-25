@@ -16,5 +16,5 @@ public class ItemStats
     [JsonPropertyName("vendorPrice")] public int? VendorPrice { get; set; }
     [JsonPropertyName("tooltip")] public List<TooltipInfo>? ToolTip { get; set; }
     [JsonPropertyName("itemLink")] public string? ItemLink { get; set; }
-    [JsonPropertyName("statsInfo")] public StatsInfo? StatsInfo { get; set; }
+    [JsonPropertyName("stats")] public StatsInfo? StatsInfo { get; set; }
 }
