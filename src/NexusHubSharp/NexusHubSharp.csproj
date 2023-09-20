@@ -5,7 +5,6 @@
         <Features>strict</Features>
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageVersion>0.1.0</PackageVersion>
         <Authors>Kyle Hickman</Authors>
         <Copyright>Copyright Kyle Hickman</Copyright>
         <Description>A C# wrapper for the NexusHub WoW Classic API</Description>
